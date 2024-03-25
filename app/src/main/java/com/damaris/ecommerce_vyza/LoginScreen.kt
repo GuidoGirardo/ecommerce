@@ -44,7 +44,7 @@ fun LoginScreen() {
             modifier = Modifier.fillMaxWidth(),
             shape = Rounded8,
             placeholder = {
-                Text("Email")
+                Text("Email / User")
             }
         )
         Spacer(modifier = Modifier.height(16.dp))

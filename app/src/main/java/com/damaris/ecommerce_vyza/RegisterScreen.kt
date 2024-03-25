@@ -44,7 +44,17 @@ fun RegisterScreen() {
             modifier = Modifier.fillMaxWidth(),
             shape = Rounded8,
             placeholder = {
-                Text("Email")
+                Text("User")
+            }
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        OutlinedTextField(
+            value = "",
+            onValueChange = { },
+            modifier = Modifier.fillMaxWidth(),
+            shape = Rounded8,
+            placeholder = {
+                Text("Mail")
             }
         )
         Spacer(modifier = Modifier.height(16.dp))
@@ -55,16 +65,6 @@ fun RegisterScreen() {
             shape = Rounded8,
             placeholder = {
                 Text("Password")
-            }
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        OutlinedTextField(
-            value = "",
-            onValueChange = { },
-            modifier = Modifier.fillMaxWidth(),
-            shape = Rounded8,
-            placeholder = {
-                Text("Confirm Password")
             }
         )
         Spacer(modifier = Modifier.height(16.dp))
