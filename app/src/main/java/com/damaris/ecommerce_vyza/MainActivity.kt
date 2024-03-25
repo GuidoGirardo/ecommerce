@@ -9,7 +9,6 @@ import androidx.compose.material3.Surface
 import com.damaris.ecommerce_vyza.ui.theme.EcommercevyzaTheme
 import androidx.compose.ui.Modifier
 import com.damaris.ecommerce_vyza.ui.navigation.NavController
-import com.damaris.ecommerce_vyza.ui.screens.auth.RegisterScreen
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
