@@ -24,6 +24,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,7 +37,7 @@ fun HomeItemScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(horizontal = 32.dp, vertical = 50.dp),
+            .padding(horizontal = 32.dp, vertical = 40.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -67,7 +68,8 @@ fun HomeItemScreen() {
                 }
                 Text(
                     text = "Guido Girardo",
-                    modifier = Modifier.weight(2f)
+                    modifier = Modifier
+                        .weight(2f)
                         .fillMaxHeight()
                         .background(Color.Cyan, RoundedCornerShape(30.dp))
                         .wrapContentSize(Alignment.Center),
@@ -90,9 +92,87 @@ fun HomeItemScreen() {
             }
         }
 
-        Spacer(modifier = Modifier.height(50.dp))
-        Text(
-            text = stringResource(id = R.string.ls_are_you_new),
-        )
+        Spacer(modifier = Modifier.height(40.dp))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(420.dp)
+                .background(Color.Red, RoundedCornerShape(20.dp))
+                .padding(30.dp)
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                contentDescription = "Foto de perfil del vendedor",
+                modifier = Modifier
+                    .size(220.dp)
+                    .align(Alignment.CenterHorizontally)
+                    .background(Color.Cyan, RoundedCornerShape(15.dp))
+            )
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = "table",
+                    style = TextStyle(fontSize = 20.sp)
+                )
+                Text(
+                    text = "-",
+                    style = TextStyle(fontSize = 20.sp)
+                )
+                Text(
+                    text = "$250",
+                    style = TextStyle(fontSize = 20.sp)
+                )
+            }
+            Spacer(modifier = Modifier.height(15.dp))
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(Color.Cyan, RoundedCornerShape(10.dp)),
+                horizontalArrangement = Arrangement.Center
+            ) {
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .background(Color.Cyan, RoundedCornerShape(10.dp))
+                        .fillMaxHeight()
+                        .wrapContentSize(Alignment.Center)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                        contentDescription = "Foto de perfil del vendedor"
+                    )
+                }
+                Text(
+                    text = "Guido Girardo",
+                    modifier = Modifier
+                        .weight(2f)
+                        .fillMaxHeight()
+                        .background(Color.Cyan, RoundedCornerShape(30.dp))
+                        .wrapContentSize(Alignment.Center),
+                    fontSize = 20.sp,
+                    textAlign = TextAlign.Center,
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(30.dp))
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.Start
+        ) {
+            Text(
+                text = "Descripcion:",
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                text = "Descripcion completa..."
+            )
+        }
+
     }
 }
