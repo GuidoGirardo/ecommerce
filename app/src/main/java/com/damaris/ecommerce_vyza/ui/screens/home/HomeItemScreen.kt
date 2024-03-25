@@ -30,7 +30,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.damaris.ecommerce_vyza.R
 
-@Preview
 @Composable
 fun HomeItemScreen() {
     Column(
@@ -61,7 +60,7 @@ fun HomeItemScreen() {
                         .wrapContentSize(Alignment.Center)
                 ) {
                     Image(
-                        painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                        painter = painterResource(id = R.drawable.keo),
                         contentDescription = "Foto de perfil del vendedor"
                     )
                 }

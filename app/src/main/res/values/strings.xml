@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">ecommerce-vyza</string>
-    <string name="title_activity_main2">MainActivity2</string>
 
     <!-- login screen -->
     <string name="ls_are_you_new">are you new? register an account</string>
