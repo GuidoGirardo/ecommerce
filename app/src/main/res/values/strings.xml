@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ecommerce-vyza</string>
+    <string name="title_activity_main2">MainActivity2</string>
+
+    <!-- login screen -->
+    <string name="ls_are_you_new">are you new? register an account</string>
+    <string name="ls_login">Login</string>
+
+    <!-- register screen -->
+    <string name="rs_have_an_account">have an account? login</string>
+    <string name="rs_register">Register</string>
+
 </resources>
