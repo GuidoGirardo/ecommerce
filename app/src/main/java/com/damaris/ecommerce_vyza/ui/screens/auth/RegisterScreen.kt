@@ -20,7 +20,9 @@ import com.damaris.ecommerce_vyza.R
 import com.damaris.ecommerce_vyza.ui.theme.Rounded8
 
 @Composable
-fun RegisterScreen() {
+fun RegisterScreen(
+    loginClick: () -> Unit
+) {
 
     Column(
         modifier = Modifier
@@ -70,7 +72,7 @@ fun RegisterScreen() {
         Text(
             text = stringResource(id = R.string.rs_have_an_account),
             modifier = Modifier
-                .clickable { }
+                .clickable { loginClick() }
         )
 
     }

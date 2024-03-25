@@ -19,13 +19,37 @@ fun NavController(
         composable(
             route = Screens.Login.name
         ) {
-            LoginScreen()
+            LoginScreen(
+                registerClick = {
+                    navController.navigate(Screens.Register.name) {
+                        popUpTo(Screens.Login.name) {
+                            inclusive = true
+                            saveState = true
+                        }
+
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+            )
         }
 
         composable(
             route = Screens.Register.name
         ) {
-            RegisterScreen()
+            RegisterScreen(
+                loginClick = {
+                    navController.navigate(Screens.Login.name) {
+                        popUpTo(Screens.Register.name) {
+                            inclusive = true
+                            saveState = true
+                        }
+
+                        launchSingleTop = true
+                        restoreState = true
+                    }
+                }
+            )
         }
     }
 }
