@@ -2,7 +2,6 @@ package com.damaris.ecommerce_vyza.ui.screens.home
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,21 +16,26 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.damaris.ecommerce_vyza.R
 import com.damaris.ecommerce_vyza.ui.components.ProfilePhoto
+import com.damaris.ecommerce_vyza.ui.theme.Gray
 
 @Composable
 fun HomeItemScreen() {
@@ -44,118 +48,74 @@ fun HomeItemScreen() {
     ) {
         Row(
             modifier = Modifier
-                .fillMaxWidth()
-                .height(80.dp),
-            verticalAlignment = Alignment.CenterVertically
+                .fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Row(
                 modifier = Modifier
-                    .weight(3f)
-                    .fillMaxHeight()
-                    .background(Color.Cyan, RoundedCornerShape(30.dp)),
+                    .background(Gray, RoundedCornerShape(8.dp))
+                    .padding(8.dp)
+                    .weight(1f),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(
+                ProfilePhoto(
                     modifier = Modifier
-                        .weight(1f)
-                        .background(Color.Cyan, RoundedCornerShape(30.dp))
-                        .fillMaxHeight()
-                        .wrapContentSize(Alignment.Center)
-                ) {
-                    ProfilePhoto(
-                        modifier = Modifier.size(64.dp)
-                    )
-                }
+                        .height(45.dp)
+                        .width(45.dp)
+                )
+                Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "Guido Girardo",
-                    modifier = Modifier
-                        .weight(2f)
-                        .fillMaxHeight()
-                        .background(Color.Cyan, RoundedCornerShape(30.dp))
-                        .wrapContentSize(Alignment.Center),
                     fontSize = 20.sp,
                     textAlign = TextAlign.Center,
                 )
             }
-            Box(
-                modifier = Modifier
-                    .weight(1f)
-                    .wrapContentSize(Alignment.Center)
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.ic_launcher_background),
-                    contentDescription = "Enviar mensaje al vendedor",
-                    modifier = Modifier
-                        .size(70.dp)
-                        .clip(RoundedCornerShape(20.dp))
-                )
-            }
+            Spacer(modifier = Modifier.width(12.dp))
+            Icon(
+                imageVector = Icons.Default.Email,
+                contentDescription = null, // for this moment
+                modifier = Modifier.size(45.dp)
+            )
         }
-
         Spacer(modifier = Modifier.height(40.dp))
         Column(
             modifier = Modifier
                 .fillMaxWidth()
                 .height(420.dp)
-                .background(Color.Red, RoundedCornerShape(20.dp))
-                .padding(30.dp)
+                .background(color = Color(0xFFD9D9D9), RoundedCornerShape(20.dp))
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                painter = painterResource(id = R.drawable.keo),
                 contentDescription = "Foto de perfil del vendedor",
                 modifier = Modifier
-                    .size(220.dp)
-                    .align(Alignment.CenterHorizontally)
-                    .background(Color.Cyan, RoundedCornerShape(15.dp))
+                    .weight(1f)
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp)),
+                contentScale = ContentScale.Crop
             )
-            Spacer(modifier = Modifier.height(15.dp))
+            Spacer(modifier = Modifier.height(14.dp))
+            Text(
+                text = "table - $250",
+                style = TextStyle(
+                    fontSize = 26.sp,
+                    fontWeight = FontWeight.ExtraBold
+                )
+            )
+            Spacer(modifier = Modifier.height(14.dp))
             Row(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 8.dp),
-                horizontalArrangement = Arrangement.Center
+                    .background(Color.White, shape = RoundedCornerShape(16.dp))
+                    .padding(12.dp, 6.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
+                Icon(imageVector = Icons.Default.Add, contentDescription = null)
+                Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = "table",
-                    style = TextStyle(fontSize = 20.sp)
-                )
-                Text(
-                    text = "-",
-                    style = TextStyle(fontSize = 20.sp)
-                )
-                Text(
-                    text = "$250",
-                    style = TextStyle(fontSize = 20.sp)
-                )
-            }
-            Spacer(modifier = Modifier.height(15.dp))
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .background(Color.Cyan, RoundedCornerShape(10.dp)),
-                horizontalArrangement = Arrangement.Center
-            ) {
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .background(Color.Cyan, RoundedCornerShape(10.dp))
-                        .fillMaxHeight()
-                        .wrapContentSize(Alignment.Center)
-                ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.ic_launcher_foreground),
-                        contentDescription = "Foto de perfil del vendedor"
-                    )
-                }
-                Text(
-                    text = "Guido Girardo",
-                    modifier = Modifier
-                        .weight(2f)
-                        .fillMaxHeight()
-                        .background(Color.Cyan, RoundedCornerShape(30.dp))
-                        .wrapContentSize(Alignment.Center),
-                    fontSize = 20.sp,
-                    textAlign = TextAlign.Center,
+                    text = "Parana, Entre Rios,Argentina",
+                    fontSize = 12.sp
                 )
             }
         }
