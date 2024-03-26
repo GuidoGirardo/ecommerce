@@ -14,8 +14,9 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.AddLocation
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,10 +33,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.damaris.ecommerce_vyza.R
 import com.damaris.ecommerce_vyza.ui.components.ProfilePhoto
-import com.damaris.ecommerce_vyza.ui.theme.grayApp
+import com.damaris.ecommerce_vyza.ui.theme.lightGrayApp
 
 @Composable
-fun HomeItemScreen() {
+fun DetailScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -51,7 +52,7 @@ fun HomeItemScreen() {
         ) {
             Row(
                 modifier = Modifier
-                    .background(grayApp, RoundedCornerShape(8.dp))
+                    .background(lightGrayApp, RoundedCornerShape(8.dp))
                     .padding(8.dp)
                     .weight(1f),
                 verticalAlignment = Alignment.CenterVertically
@@ -108,7 +109,7 @@ fun HomeItemScreen() {
                     .padding(12.dp, 6.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Default.Add, contentDescription = null)
+                Icon(imageVector = Icons.Default.LocationOn, contentDescription = null)
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = "Parana, Entre Rios,Argentina",
