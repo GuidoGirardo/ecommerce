@@ -3,18 +3,15 @@ package com.damaris.ecommerce_vyza.ui.screens.home
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -35,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.damaris.ecommerce_vyza.R
 import com.damaris.ecommerce_vyza.ui.components.ProfilePhoto
-import com.damaris.ecommerce_vyza.ui.theme.Gray
+import com.damaris.ecommerce_vyza.ui.theme.grayApp
 
 @Composable
 fun HomeItemScreen() {
@@ -54,7 +51,7 @@ fun HomeItemScreen() {
         ) {
             Row(
                 modifier = Modifier
-                    .background(Gray, RoundedCornerShape(8.dp))
+                    .background(grayApp, RoundedCornerShape(8.dp))
                     .padding(8.dp)
                     .weight(1f),
                 verticalAlignment = Alignment.CenterVertically
