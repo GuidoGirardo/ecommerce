@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -30,6 +31,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.damaris.ecommerce_vyza.R
+import com.damaris.ecommerce_vyza.ui.components.ProfilePhoto
 
 @Composable
 fun HomeItemScreen() {
@@ -60,9 +62,8 @@ fun HomeItemScreen() {
                         .fillMaxHeight()
                         .wrapContentSize(Alignment.Center)
                 ) {
-                    Image(
-                        painter = painterResource(id = R.drawable.keo),
-                        contentDescription = "Foto de perfil del vendedor"
+                    ProfilePhoto(
+                        modifier = Modifier.size(64.dp)
                     )
                 }
                 Text(
