@@ -9,4 +9,8 @@
     <string name="rs_have_an_account">have an account? login</string>
     <string name="rs_register">Register</string>
 
+    <!-- profile screen -->
+    <string name="ps_profile_screen">Profile Screen</string>
+    <string name="ps_profile_photo">Profile Photo</string>
+
 </resources>
