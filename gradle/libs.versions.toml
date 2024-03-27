@@ -39,6 +39,8 @@ androidx-navigation-compose = { group = "androidx.navigation", name = "navigatio
 io-coil-compose = { group = "io.coil-kt", name = "coil-compose", version = "2.6.0"}
 com-google-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 com-google-firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+com-google-firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

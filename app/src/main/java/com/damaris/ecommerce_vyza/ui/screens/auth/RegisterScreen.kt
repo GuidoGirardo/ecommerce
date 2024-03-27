@@ -19,9 +19,13 @@ import androidx.compose.ui.unit.dp
 import com.damaris.ecommerce_vyza.R
 import com.damaris.ecommerce_vyza.ui.theme.Rounded8
 
+// agregue
+import com.damaris.ecommerce_vyza.ui.modelview.AuthViewModel
+
 @Composable
 fun RegisterScreen(
-    loginClick: () -> Unit
+    loginClick: () -> Unit,
+    viewModel: AuthViewModel
 ) {
 
     Column(
@@ -63,7 +67,9 @@ fun RegisterScreen(
         Spacer(modifier = Modifier.height(16.dp))
         Button(
             modifier = Modifier.fillMaxWidth(),
-            onClick = { /*TODO*/ },
+            onClick = {
+                viewModel.registerUser("email@email.com", "123sdsd")
+            },
             shape = Rounded8
         ) {
             Text(text = stringResource(id = R.string.rs_register))
