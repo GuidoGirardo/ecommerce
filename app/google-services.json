@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "574844303594",
+    "project_id": "ecommerce-vyza",
+    "storage_bucket": "ecommerce-vyza.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574844303594:android:260940370f7117baa73f93",
+        "android_client_info": {
+          "package_name": "com.damaris.ecommerce_vyza"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6_u3EaNoOlqaAUdGanInxq4SOUO_-I7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
