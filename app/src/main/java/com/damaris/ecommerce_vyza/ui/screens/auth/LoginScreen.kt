@@ -64,6 +64,7 @@ fun LoginScreen(
             text = stringResource(id = R.string.ls_are_you_new),
             modifier = Modifier
                 .clickable { registerClick() }
+
         )
     }
 }
