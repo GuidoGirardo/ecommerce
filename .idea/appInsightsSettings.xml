@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.damaris.ecommerce_vyza" />
+                  <option name="mobileSdkAppId" value="1:574844303594:android:260940370f7117baa73f93" />
+                  <option name="projectId" value="ecommerce-vyza" />
+                  <option name="projectNumber" value="574844303594" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
