@@ -3,6 +3,7 @@ package com.damaris.ecommerce_vyza.ui.screens.profile
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,6 +13,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,11 +28,11 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
+import com.damaris.ecommerce_vyza.ui.components.LocationPoint
 import com.damaris.ecommerce_vyza.ui.theme.appText
 import com.damaris.ecommerce_vyza.ui.theme.backgroundApp
 import com.damaris.ecommerce_vyza.ui.theme.grayApp
 
-@Preview
 @Composable
 fun ProfileScreen(
     // profileClick: () -> Unit
@@ -39,7 +41,7 @@ fun ProfileScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(backgroundApp)
-            .padding(horizontal = 32.dp, vertical = 16.dp),
+            .padding(horizontal = 16.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -48,8 +50,9 @@ fun ProfileScreen(
             contentScale = ContentScale.Crop,
             contentDescription = "Profile image",
             modifier = Modifier
-                .size(222.dp)
-                .clip(shape = RoundedCornerShape(92.dp))
+                .height(120.dp)
+                .width(120.dp)
+                .clip(shape = RoundedCornerShape(50))
         )
         Spacer(modifier = Modifier.height(24.dp))
         Text(text = "User", fontSize = 26.sp, color = appText, fontWeight = FontWeight.Bold)
@@ -59,32 +62,33 @@ fun ProfileScreen(
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(modifier = Modifier.height(24.dp))
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(150.dp)
-                .background(grayApp, RoundedCornerShape(32.dp))
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.keo),
-                contentDescription = "Foto de perfil del vendedor",
+        Box {
+            Row(
                 modifier = Modifier
-                    .weight(1f)
-                    .padding(15.dp)
-                    .clip(RoundedCornerShape(16.dp)),
-                contentScale = ContentScale.Crop
-            )
-            Column(
-                modifier = Modifier
-                    .fillMaxHeight()
-                    .weight(1f)
-                    .background(grayApp, RoundedCornerShape(16.dp)),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.Start
+                    .fillMaxWidth()
+                    .background(grayApp, RoundedCornerShape(16.dp))
+                    .padding(8.dp)
             ) {
-                Text(text = "Product", fontSize = 26.sp, color = appText,
-                    modifier = Modifier.padding(vertical = 14.dp))
-                Text(text = "Price", fontSize = 26.sp, color = appText)
+                Image(
+                    painter = painterResource(id = R.drawable.tableimage),
+                    modifier = Modifier
+                        .width(135.dp)
+                        .height(135.dp)
+                        .clip(RoundedCornerShape(16.dp)),
+                    contentDescription = "Foto de perfil del vendedor",
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.width(8.dp))
+                Column(
+                    verticalArrangement = Arrangement.Center,
+                    horizontalAlignment = Alignment.Start
+                ) {
+                    LocationPoint()
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(text = "table", fontSize = 24.sp, color = appText)
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(text = "$250", fontSize = 24.sp, color = appText)
+                }
             }
         }
     }

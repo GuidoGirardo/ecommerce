@@ -8,6 +8,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import com.damaris.ecommerce_vyza.ui.screens.home.DetailScreen
+import com.damaris.ecommerce_vyza.ui.screens.profile.ProfileScreen
 import com.damaris.ecommerce_vyza.ui.theme.EcommercevyzaTheme
 
 class MainActivity : AppCompatActivity() {
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    DetailScreen()
+                    ProfileScreen()
                 }
             }
         }

@@ -31,6 +31,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.damaris.ecommerce_vyza.R
+import com.damaris.ecommerce_vyza.ui.components.LocationPoint
 import com.damaris.ecommerce_vyza.ui.components.ProfilePhoto
 import com.damaris.ecommerce_vyza.ui.theme.lightGrayApp
 
@@ -103,19 +104,7 @@ fun DetailScreen() {
                 )
             )
             Spacer(modifier = Modifier.height(14.dp))
-            Row(
-                modifier = Modifier
-                    .background(Color.White, shape = RoundedCornerShape(16.dp))
-                    .padding(12.dp, 6.dp),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(imageVector = Icons.Default.LocationOn, contentDescription = null)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = "Parana, Entre Rios,Argentina",
-                    fontSize = 12.sp
-                )
-            }
+            LocationPoint()
         }
 
         Spacer(modifier = Modifier.height(30.dp))
