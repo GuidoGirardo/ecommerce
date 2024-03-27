@@ -11,10 +11,11 @@ import com.damaris.ecommerce_vyza.R
 
 @Composable
 fun ProfilePhoto(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    model: Any?
 ) {
     AsyncImage(
-        model = R.drawable.keo,
+        model = model,
         contentDescription = stringResource(id = R.string.ps_profile_photo),
         modifier = modifier
             .clip(RoundedCornerShape(50)),

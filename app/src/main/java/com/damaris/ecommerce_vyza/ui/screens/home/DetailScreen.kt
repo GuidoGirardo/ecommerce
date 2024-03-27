@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AddLocation
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material3.Icon
@@ -60,7 +59,8 @@ fun DetailScreen() {
                 ProfilePhoto(
                     modifier = Modifier
                         .height(45.dp)
-                        .width(45.dp)
+                        .width(45.dp),
+                    model = R.drawable.keo
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
@@ -86,7 +86,7 @@ fun DetailScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(id = R.drawable.keo),
+                painter = painterResource(id = R.drawable.tableimage),
                 contentDescription = "Foto de perfil del vendedor",
                 modifier = Modifier
                     .weight(1f)
